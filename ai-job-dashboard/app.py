@@ -6,7 +6,8 @@ st.set_page_config(page_title="My AI Dashboard", layout="wide")
 
 # ส่วนหัว
 st.title("AI Dashhhhh")
-st.sidebar.header("การตั้งค่า")
+st.balloons()
+st.sidebar.header("การตั้งค่าเมนู")
 
 # ข้อมูลตัวอย่าง (Mock Data)
 data = pd.DataFrame({
@@ -48,3 +49,4 @@ fig3 = px.scatter(filtered_df, x="Ease_of_Use", y="Popularity",
                  size="Popularity", color="Language", hover_name="Language")
 st.plotly_chart(fig3, use_container_width=True)
 st.metric(label="Total Languages", value=len(filtered_df))
+st.balloons()
