@@ -31,19 +31,19 @@ col1, col2 = st.columns(2)
 
 with col1:
     # 2. กราฟที่ 1: Bar Chart (ยอดนิยม)
-    st.subheader("📊 ความนิยมของภาษา")
-    fig1 = px.bar(filtered_df, x="Language", y="Popularity", color="Language")
+    st.subheader(" ความนิยมของภาษา")
+    fig1 = px.bar(filtered_df, x="Language", y="Popularity", color="Language", color_discrete_sequence=px.colors.qualitative.Pastel)
     st.plotly_chart(fig1, use_container_width=True)
 
 with col2:
     # 3. กราฟที่ 2: Pie Chart (ส่วนแบ่ง)
-    st.subheader("🍕 สัดส่วนข้อมูล")
+    st.subheader("สัดส่วนข้อมูล")
     fig2 = px.pie(filtered_df, values="Popularity", names="Language")
     st.plotly_chart(fig2, use_container_width=True)
 
 # 4. กราฟที่ 3: Scatter Plot (ความง่าย vs ความนิยม)
 st.divider()
-st.subheader("📈 ความง่ายในการเรียนรู้ vs ความนิยม")
+st.subheader(" ความง่ายในการเรียนรู้ vs ความนิยม")
 fig3 = px.scatter(filtered_df, x="Ease_of_Use", y="Popularity", 
                  size="Popularity", color="Language", hover_name="Language")
 st.plotly_chart(fig3, use_container_width=True)
