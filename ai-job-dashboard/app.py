@@ -47,3 +47,4 @@ st.subheader(" ความง่ายในการเรียนรู้ v
 fig3 = px.scatter(filtered_df, x="Ease_of_Use", y="Popularity", 
                  size="Popularity", color="Language", hover_name="Language")
 st.plotly_chart(fig3, use_container_width=True)
+st.metric(label="Total Languages", value=len(filtered_df))
