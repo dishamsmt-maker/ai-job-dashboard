@@ -1,0 +1,1 @@
+# AI Job & Programming Dashboard Dashboard นี้สร้างขึ้นเพื่อแสดงข้อมูลความนิยมของภาษาโปรแกรมที่เกี่ยวข้องกับ AI และ Data Science
