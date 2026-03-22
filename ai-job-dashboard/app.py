@@ -5,7 +5,7 @@ import plotly.express as px
 st.set_page_config(page_title="My AI Dashboard", layout="wide")
 
 # ส่วนหัว
-st.title("AI Dashhhhh")
+st.title("AI Dashhhhhhh")
 st.balloons()
 st.sidebar.header("การตั้งค่าเมนู")
 user_name = st.sidebar.text_input("กรอกชื่อผู้ใช้งาน:", "Disham")
