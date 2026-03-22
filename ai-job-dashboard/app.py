@@ -9,6 +9,8 @@ st.title("AI Dashhhhh")
 st.balloons()
 st.sidebar.header("การตั้งค่าเมนู")
 user_name = st.sidebar.text_input("กรอกชื่อผู้ใช้งาน:", "Disham")
+theme_color = st.sidebar.color_picker("เลือกสีธีมที่ชอบ:", "#00f900")
+st.sidebar.write(f"คุณเลือกสี: {theme_color}")
 st.sidebar.write(f"สวัสดีคุณ {user_name}!")
 
 # ข้อมูลตัวอย่าง (Mock Data)
