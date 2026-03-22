@@ -8,6 +8,8 @@ st.set_page_config(page_title="My AI Dashboard", layout="wide")
 st.title("AI Dashhhhh")
 st.balloons()
 st.sidebar.header("การตั้งค่าเมนู")
+user_name = st.sidebar.text_input("กรอกชื่อผู้ใช้งาน:", "Disham")
+st.sidebar.write(f"สวัสดีคุณ {user_name}!")
 
 # ข้อมูลตัวอย่าง (Mock Data)
 data = pd.DataFrame({
@@ -51,3 +53,4 @@ st.plotly_chart(fig3, use_container_width=True)
 st.metric(label="Total Languages", value=len(filtered_df))
 st.balloons()
 st.sidebar.info("Dashboard นี้อัปเดตอัตโนมัติ")
+
