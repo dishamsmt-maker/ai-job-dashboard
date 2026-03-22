@@ -37,6 +37,7 @@ with col1:
     st.subheader(" ความนิยมของภาษา")
     fig1 = px.bar(filtered_df, x="Language", y="Popularity", color="Language", color_discrete_sequence=px.colors.qualitative.Pastel)
     st.plotly_chart(fig1, use_container_width=True)
+    st.info(f"💡 กราฟแท่งแสดงความนิยมของภาษาที่เลือกสำหรับคุณ {user_name}")
 
 with col2:
     # 3. กราฟที่ 2: Pie Chart (ส่วนแบ่ง)
