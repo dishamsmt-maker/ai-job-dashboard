@@ -21,12 +21,15 @@ data = pd.DataFrame({
 # 1. ตัว Interactive (Sidebar Filter)
 # เมื่อเลือกใน Sidebar กราฟข้างล่างจะเปลี่ยนตาม (ตรงตามเงื่อนไข interactive ระหว่าง components)
 selected_lang = st.sidebar.multiselect(
+    
     "เลือกภาษาโปรแกรมที่ต้องการดูข้อมูล:",
     options=data["Language"].tolist(),
     default=data["Language"].tolist()
 )
 
 # กรองข้อมูลตามที่เลือก
+score_range = st.sidebar.slider("กรองช่วงคะแนนความนิยม:", 0, 100, (0, 100))
+filtered_df = filtered_df[(filtered_df['Popularity'] >= score_range[0]) & (filtered_df['Popularity'] <= score_range[1])]
 filtered_df = data[data["Language"].isin(selected_lang)]
 
 # แบ่ง Layout เป็น 2 คอลัมน์
